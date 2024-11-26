@@ -1,0 +1,40 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Default Progress Bar -->
+            <div class="col-md-6">
+                {% include 'partials/progressbar-default.twig' with { width: 60, height: '6px', srText: '60% Complete' } %}
+            </div>
+
+            <!-- Striped Progress Bar -->
+            <div class="col-md-6">
+                {% include 'partials/progressbar-striped.twig' with { width: 85, height: '10px', srText: '85% Complete (success)' } %}
+            </div>
+
+            <!-- Colored Progress Bars -->
+            <div class="col-md-4">
+                {% include 'partials/progressbar-colored.twig' with {
+                    bars: [
+                        { color: 'bg-danger', width: 60, height: '6px', srText: '60% Complete' },
+                        { color: 'bg-info', width: 40, height: '6px', srText: '40% Complete' }
+                    ]
+                } %}
+            </div>
+
+            <!-- Animated Striped Bar -->
+            <div class="col-md-4">
+                {% include 'partials/progressbar-animated-striped.twig' with { color: 'bg-warning', width: 80, height: '14px', srText: '80% Complete' } %}
+            </div>
+
+            <!-- Vertical Progress Bar -->
+            <div class="col-md-4">
+                {% include 'partials/progressbar-vertical.twig' with { color: 'bg-success', width: 4, height: 60, srText: '60% Complete' } %}
+            </div>
+
+            <!-- Skill Bars -->
+            <div class="col-md-8">
+                {% include 'partials/progressbar-skillbar.twig' with { skillName: 'Photoshop', percentage: 85, color: 'bg-danger', height: '6px', srText: '85% Complete' } %}
+            </div>
+        </div>
+    </div>
+</div>

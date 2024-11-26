@@ -1,0 +1,70 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Default Button Group -->
+            {% include 'partials/button-groups/button-group-default.twig' with {
+                buttons: [
+                    { type: 'primary', text: 'Left' },
+                    { type: 'primary', text: 'Middle' },
+                    { type: 'primary', text: 'Right' }
+                ]
+            } %}
+            
+            <!-- Button Toolbar -->
+            {% include 'partials/button-groups/button-group-toolbar.twig' with {
+                buttonGroups: [
+                    [
+                        { type: 'primary', text: '1' },
+                        { type: 'primary', text: '2' },
+                        { type: 'primary', text: '3' }
+                    ],
+                    [
+                        { type: 'secondary', text: 'A' },
+                        { type: 'secondary', text: 'B' }
+                    ]
+                ]
+            } %}
+            
+            <!-- Button Group Sizing -->
+            {% include 'partials/button-groups/button-group-sizing.twig' with {
+                size: 'lg',
+                buttons: [
+                    { type: 'primary', text: 'Large Left' },
+                    { type: 'primary', text: 'Large Right' }
+                ]
+            } %}
+            
+            <!-- Button Group Nesting -->
+            {% include 'partials/button-groups/button-group-nesting.twig' with {
+                buttons: [
+                    { type: 'primary', text: '1' },
+                    { type: 'primary', text: '2' },
+                    {
+                        type: 'secondary',
+                        text: 'Dropdown',
+                        dropdown: [
+                            { url: '#', text: 'Action 1' },
+                            { url: '#', text: 'Action 2' }
+                        ]
+                    }
+                ]
+            } %}
+            
+            <!-- Vertical Button Group -->
+            {% include 'partials/button-groups/button-group-vertical.twig' with {
+                buttons: [
+                    { type: 'primary', text: 'Vertical 1' },
+                    { type: 'secondary', text: 'Vertical 2' },
+                    {
+                        type: 'info',
+                        text: 'Vertical Dropdown',
+                        dropdown: [
+                            { url: '#', text: 'Link 1' },
+                            { url: '#', text: 'Link 2' }
+                        ]
+                    }
+                ]
+            } %}
+        </div>
+    </div>
+</div>

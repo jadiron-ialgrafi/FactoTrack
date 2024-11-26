@@ -1,0 +1,45 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>{{ title }}</h4>
+                    {% if subtitle %}
+                        <span class="ml-1">{{ subtitle }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                <ol class="breadcrumb">
+                    {% for crumb in breadcrumbs %}
+                        <li class="breadcrumb-item {% if loop.last %}active{% endif %}">
+                            <a href="{{ crumb.link }}">{{ crumb.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <form method="POST" action="{{ formAction }}">
+                    <div class="card">
+                        <div class="card-header d-block">
+                            <h4 class="card-title">{{ formTitle }}</h4>
+                        </div>
+                        <div class="card-body">
+                            {% include 'partials/button-primary.twig' with { type: 'submit', label: 'Primary Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-secondary.twig' with { type: 'button', label: 'Secondary Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-success.twig' with { type: 'button', label: 'Success Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-danger.twig' with { type: 'button', label: 'Danger Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-warning.twig' with { type: 'button', label: 'Warning Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-info.twig' with { type: 'button', label: 'Info Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-light.twig' with { type: 'button', label: 'Light Button', classes: 'custom-class' } %}
+                            {% include 'partials/button-dark.twig' with { type: 'button', label: 'Dark Button', classes: 'custom-class' } %}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

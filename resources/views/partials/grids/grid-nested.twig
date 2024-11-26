@@ -1,0 +1,16 @@
+<div class="row grid">
+    {% for column in columns %}
+    <div class="{{ column.class }}">
+        <div class="grid-col">{{ column.label }}</div>
+        {% if column.nested %}
+        <div class="row grid">
+            {% for nestedColumn in column.nested %}
+            <div class="{{ nestedColumn.class }}">
+                <div class="grid-col">{{ nestedColumn.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>

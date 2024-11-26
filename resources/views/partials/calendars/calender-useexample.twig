@@ -1,0 +1,11 @@
+{% include 'partials/calendars/calendar-main.twig' with {
+    events: [
+        { class: 'bg-primary', title: 'New Theme Release' },
+        { class: 'bg-success', title: 'My Event' },
+        { class: 'bg-warning', title: 'Meet Manager' },
+        { class: 'bg-dark', title: 'Create New Theme' }
+    ]
+} %}
+
+{% include 'partials/calendars/calendar-event-modal.twig' %}
+{% include 'partials/calendars/calendar-category-modal.twig' %}

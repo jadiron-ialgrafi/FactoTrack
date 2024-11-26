@@ -1,0 +1,45 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Basic Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-basic.twig' with { type: 'primary', title: 'Welcome!', message: 'Message has been sent.' } %}
+            </div>
+
+            <!-- Solid Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-solid.twig' with { type: 'success', title: 'Success!', message: 'Profile photo updated.' } %}
+            </div>
+
+            <!-- Square Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-square.twig' with { type: 'info', title: 'Info!', message: 'You have got 5 new emails.' } %}
+            </div>
+
+            <!-- Rounded Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-rounded.twig' with { type: 'danger', title: 'Error!', message: 'Something went wrong.' } %}
+            </div>
+
+            <!-- Dismissible Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-dismissible.twig' with { type: 'warning', title: 'Warning!', message: 'Please check the details.' } %}
+            </div>
+
+            <!-- Notification Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-notification.twig' with { type: 'success', title: 'Success!', message: 'Action completed successfully.' } %}
+            </div>
+
+            <!-- Icon Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-icon.twig' with { type: 'info', icon: 'mdi-email', title: 'Email Notification', message: 'You have a new message.' } %}
+            </div>
+
+            <!-- Social Alert -->
+            <div class="col-md-6">
+                {% include 'partials/alert-social.twig' with { platform: 'facebook', message: 'New post created successfully.' } %}
+            </div>
+        </div>
+    </div>
+</div>

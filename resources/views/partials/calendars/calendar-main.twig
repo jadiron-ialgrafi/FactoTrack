@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-intro-title">Calendar</h4>
+                <div id="external-events" class="my-3">
+                    <p>Drag and drop your event or click in the calendar</p>
+                    {% for event in events %}
+                    <div class="external-event" data-class="{{ event.class }}">
+                        <i class="fa fa-move"></i>{{ event.title }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="checkbox checkbox-event pt-3 pb-5">
+                    <input id="drop-remove" class="styled-checkbox" type="checkbox">
+                    <label class="ml-2 mb-0" for="drop-remove">Remove After Drop</label>
+                </div>
+                <a href="javascript:void()" data-toggle="modal" data-target="#add-category" class="btn btn-primary btn-event w-100">
+                    <span class="align-middle"><i class="ti-plus"></i></span> Create New
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="card">
+            <div class="card-body">
+                <div id="calendar" class="app-fullcalendar"></div>
+            </div>
+        </div>
+    </div>
+</div>

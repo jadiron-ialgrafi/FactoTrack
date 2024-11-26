@@ -1,0 +1,9 @@
+<div class="btn-toolbar" role="toolbar">
+    {% for group in buttonGroups %}
+    <div class="btn-group mr-2" role="group">
+        {% for button in group %}
+        <button type="button" class="btn btn-{{ button.type }}">{{ button.text }}</button>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>

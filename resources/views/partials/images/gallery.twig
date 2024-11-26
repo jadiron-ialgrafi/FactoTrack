@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-title">
+        <h4>Image Gallery</h4>
+    </div>
+    <div class="card-body">
+        <p class="text-muted m-b-15">You can also use Bootstrap's grid system in conjunction with the <code>.thumbnail</code> class to create an image gallery.</p>
+        <div class="row">
+            {% for image in images %}
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="{{ image.href }}">
+                        <img class="w-100" src="{{ image.src }}" alt="{{ image.alt }}">
+                        <div class="caption">
+                            <p>{{ image.caption }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

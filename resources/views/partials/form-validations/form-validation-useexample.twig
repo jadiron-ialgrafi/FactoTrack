@@ -1,0 +1,41 @@
+$fields = [
+    [
+        'type' => 'text',
+        'id' => 'val-username',
+        'name' => 'val-username',
+        'label' => 'Username',
+        'placeholder' => 'Enter a username..',
+        'required' => true,
+    ],
+    [
+        'type' => 'email',
+        'id' => 'val-email',
+        'name' => 'val-email',
+        'label' => 'Email',
+        'placeholder' => 'Your valid email..',
+        'required' => true,
+    ],
+    [
+        'type' => 'textarea',
+        'id' => 'val-suggestions',
+        'name' => 'val-suggestions',
+        'label' => 'Suggestions',
+        'placeholder' => 'What would you like to see?',
+        'rows' => 5,
+        'required' => true,
+    ],
+    [
+        'type' => 'select',
+        'id' => 'val-select2',
+        'name' => 'val-select2',
+        'label' => 'Best Skill',
+        'options' => [
+            ['value' => 'html', 'label' => 'HTML'],
+            ['value' => 'css', 'label' => 'CSS'],
+            ['value' => 'javascript', 'label' => 'JavaScript'],
+        ],
+        'required' => true,
+    ],
+];
+
+echo $twig->render('partials/form-validations/form-validation.twig', ['fields' => $fields]);

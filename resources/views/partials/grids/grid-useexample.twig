@@ -1,0 +1,51 @@
+grid-options.twig For rendering grid options in a tabular format:
+{% include 'partials/grids/grid-options.twig' with {
+    breakpoints: [
+        { name: "Extra small", description: "<576px" },
+        { name: "Small", description: "≥576px" },
+        { name: "Medium", description: "≥768px" },
+        { name: "Large", description: "≥992px" },
+        { name: "Extra large", description: "≥1200px" }
+    ],
+    rows: [
+        { title: "Max container-fluid width", values: ["None (auto)", "540px", "720px", "960px", "1140px"] },
+        { title: "Class prefix", values: [".col-", ".col-sm-", ".col-md-", ".col-lg-", ".col-xl-"] },
+        { title: "# of columns", values: ["12", "12", "12", "12", "12"] },
+        { title: "Gutter width", values: ["24px", "24px", "24px", "24px", "24px"] },
+        { title: "Nestable", values: ["Yes", "Yes", "Yes", "Yes", "Yes"] },
+        { title: "Column ordering", values: ["Yes", "Yes", "Yes", "Yes", "Yes"] }
+    ]
+} %}
+
+
+grid-column.twig For rendering single-row grids:
+{% include 'partials/grids/grid-column.twig' with {
+    columns: [
+        { class: "col-lg-12", label: ".Col-lg-12" },
+        { class: "col-lg-6", label: ".Col-lg-6" },
+        { class: "col-lg-6", label: ".Col-lg-6" }
+    ]
+} %}
+
+
+grid-nested.twig For nested grid structures:
+{% include 'partials/grids/grid-nested.twig' with {
+    columns: [
+        {
+            class: "col-lg-6",
+            label: ".Col-lg-6",
+            nested: [
+                { class: "col-lg-4", label: ".Col-lg-4" },
+                { class: "col-lg-8", label: ".Col-lg-8" }
+            ]
+        },
+        {
+            class: "col-lg-6",
+            label: ".Col-lg-6",
+            nested: [
+                { class: "col-lg-3", label: ".Col-lg-3" },
+                { class: "col-lg-9", label: ".Col-lg-9" }
+            ]
+        }
+    ]
+} %}

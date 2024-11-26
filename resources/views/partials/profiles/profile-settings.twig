@@ -1,0 +1,20 @@
+<div class="profile-settings">
+    <h4 class="text-primary">Account Settings</h4>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" placeholder="Email" class="form-control" value="{{ settings.email }}">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Password</label>
+                <input type="password" placeholder="Password" class="form-control" value="{{ settings.password }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" placeholder="1234 Main St" class="form-control" value="{{ settings.address }}">
+        </div>
+        <button class="btn btn-primary" type="submit">Save Settings</button>
+    </form>
+</div>

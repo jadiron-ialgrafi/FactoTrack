@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                {% for breakpoint in breakpoints %}
+                <th class="text-center text-dark">
+                    {{ breakpoint.name }}<br>
+                    <small class="text-muted">{{ breakpoint.description }}</small>
+                </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <th class="text-nowrap text-dark" scope="row">{{ row.title }}</th>
+                {% for value in row.values %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

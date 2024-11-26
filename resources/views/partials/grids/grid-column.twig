@@ -1,0 +1,7 @@
+<div class="row grid">
+    {% for column in columns %}
+    <div class="{{ column.class }}">
+        <div class="grid-col">{{ column.label }}</div>
+    </div>
+    {% endfor %}
+</div>

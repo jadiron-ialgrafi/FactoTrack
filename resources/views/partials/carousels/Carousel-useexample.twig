@@ -1,0 +1,32 @@
+Basic Carousel
+{% include 'partials/carousel/carousel-basic.twig' with {
+    id: 'carouselExampleBasic',
+    slides: [
+        { image: './images/big/img5.jpg', alt: 'First slide' },
+        { image: './images/big/img6.jpg', alt: 'Second slide' },
+        { image: './images/big/img8.jpg', alt: 'Third slide' }
+    ],
+    controls: true
+} %}
+
+
+Carousel with Indicators
+{% include 'partials/carousel/carousel-with-indicators.twig' with {
+    id: 'carouselExampleIndicators',
+    slides: [
+        { image: './images/big/img5.jpg', alt: 'First slide' },
+        { image: './images/big/img6.jpg', alt: 'Second slide' },
+        { image: './images/big/img8.jpg', alt: 'Third slide' }
+    ]
+} %}
+
+Carousel with Captions
+{% include 'partials/carousel/carousel-with-captions.twig' with {
+    id: 'carouselExampleCaptions',
+    slides: [
+        { image: './images/big/img5.jpg', alt: 'First slide', caption: { title: 'First Slide', text: 'This is the first slide caption.' } },
+        { image: './images/big/img6.jpg', alt: 'Second slide', caption: { title: 'Second Slide', text: 'This is the second slide caption.' } },
+        { image: './images/big/img8.jpg', alt: 'Third slide', caption: { title: 'Third Slide', text: 'This is the third slide caption.' } }
+    ],
+    controls: true
+} %}

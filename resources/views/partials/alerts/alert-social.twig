@@ -1,0 +1,14 @@
+<div class="alert alert-social {{ platform }} alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span><i class="mdi mdi-close"></i></span>
+    </button>
+    <div class="media">
+        <div class="alert-social-icon">
+            <span><i class="mdi mdi-{{ platform }}"></i></span>
+        </div>
+        <div class="media-body">
+            <h5 class="mt-1 mb-1">{{ platform | capitalize }}</h5>
+            <p>{{ message }}</p>
+        </div>
+    </div>
+</div>

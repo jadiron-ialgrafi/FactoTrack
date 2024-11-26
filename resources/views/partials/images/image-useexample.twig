@@ -1,0 +1,36 @@
+rounded-corners.twig
+{% include 'partials/images/rounded-corners.twig' with {
+    imageSrc: 'assets/images/paris.jpg',
+    altText: 'Cinque Terre'
+} %}
+
+
+circle.twig
+{% include 'partials/images/circle.twig' with {
+    imageSrc: 'assets/images/newyork.jpg',
+    altText: 'Cinque Terre'
+} %}
+
+
+thumbnail.twig
+{% include 'partials/images/thumbnail.twig' with {
+    imageSrc: 'assets/images/sanfran.jpg',
+    altText: 'Cinque Terre'
+} %}
+
+
+responsive-images.twig
+{% include 'partials/images/responsive-images.twig' with {
+    imageSrc: 'assets/images/lights.jpg',
+    altText: 'Cinque Terre'
+} %}
+
+
+gallery.twig
+{% include 'partials/images/gallery.twig' with {
+    images: [
+        { href: 'assets/images/lights.jpg', src: 'assets/images/lights.jpg', alt: 'Lights', caption: 'Lorem ipsum donec id elit non mi porta gravida at eget metus.' },
+        { href: 'assets/images/nature.jpg', src: 'assets/images/nature.jpg', alt: 'Nature', caption: 'Lorem ipsum donec id elit non mi porta gravida at eget metus.' },
+        { href: 'assets/images/fjords.jpg', src: 'assets/images/fjords.jpg', alt: 'Fjords', caption: 'Lorem ipsum donec id elit non mi porta gravida at eget metus.' }
+    ]
+} %}

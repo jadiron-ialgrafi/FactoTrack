@@ -1,0 +1,12 @@
+<div class="card text-white bg-{{ color }}">
+    <div class="card-header">
+        <h5 class="card-title text-white">{{ title }}</h5>
+    </div>
+    <div class="card-body mb-0">
+        <p class="card-text">{{ body }}</p>
+        {% if button %}
+        <a href="{{ button.url }}" class="btn btn-dark btn-card">{{ button.text }}</a>
+        {% endif %}
+    </div>
+    <div class="card-footer bg-transparent border-0 text-white">{{ footer }}</div>
+</div>

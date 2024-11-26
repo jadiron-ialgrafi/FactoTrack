@@ -1,0 +1,23 @@
+<li class="nav-label">{{ label }}</li>
+{% for item in items %}
+    {% if item.submenu is defined %}
+        <li>
+            <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <i class="{{ item.icon }}"></i>
+                <span class="nav-text">{{ item.name }}</span>
+            </a>
+            <ul aria-expanded="false">
+                {% for subItem in item.submenu %}
+                    <li><a href="{{ subItem.url }}">{{ subItem.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% else %}
+        <li>
+            <a href="{{ item.url }}" aria-expanded="false">
+                <i class="{{ item.icon }}"></i>
+                <span class="nav-text">{{ item.name }}</span>
+            </a>
+        </li>
+    {% endif %}
+{% endfor %}

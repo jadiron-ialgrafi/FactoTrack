@@ -1,0 +1,12 @@
+<div class="list-group">
+    {% for item in items %}
+    <a href="{{ item.link }}" class="list-group-item list-group-item-action flex-column align-items-start {% if item.active %}active{% endif %}">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-3 {% if item.active %}text-white{% endif %}">{{ item.heading }}</h5>
+            <small class="{{ item.smallClass }}">{{ item.time }}</small>
+        </div>
+        <p class="mb-1">{{ item.content }}</p>
+        <small class="{{ item.smallClass }}">{{ item.additional }}</small>
+    </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,61 @@
+<div class="row">
+    <!-- Widget Card One -->
+    {% include 'partials/widget-cards/widget-card-one.twig' with {
+        widget: {
+            icon: 'ti-money',
+            iconColor: 'color-success',
+            borderColor: 'border-success',
+            text: 'Total Profit',
+            value: '1,012'
+        }
+    } %}
+
+    <!-- Widget Card Two -->
+    {% include 'partials/widget-cards/widget-card-two.twig' with {
+        widget: {
+            text: 'Today Expenses',
+            value: '$8,500',
+            progressBarColor: 'progress-bar-success',
+            progressWidth: 85
+        }
+    } %}
+
+    <!-- Widget Card Three -->
+    {% include 'partials/widget-cards/widget-card-three.twig' with {
+        widget: {
+            backgroundColor: 'bg-primary',
+            icon: 'ti-user',
+            value: '123',
+            text: 'New User'
+        }
+    } %}
+
+    <!-- Widget Card Four -->
+    {% include 'partials/widget-cards/widget-card-four.twig' with {
+        widget: {
+            icon: 'ti-stats-up',
+            heading: 'Daily Sales',
+            text: '765'
+        }
+    } %}
+
+    <!-- Widget Card Five -->
+    {% include 'partials/widget-cards/widget-card-five.twig' with {
+        widget: {
+            icon: 'ti-info',
+            backgroundColor: 'bg-danger',
+            headingColor: 'color-primary',
+            heading: 'Growth',
+            text: '200%'
+        }
+    } %}
+
+    <!-- Widget Card Six -->
+    {% include 'partials/widget-cards/widget-card-six.twig' with {
+        widget: {
+            icon: 'ti-pulse',
+            heading: 'Bandwidth',
+            text: '167.32 GB/s'
+        }
+    } %}
+</div>

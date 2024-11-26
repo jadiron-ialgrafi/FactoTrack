@@ -1,0 +1,14 @@
+{% for editor in editors %}
+<div class="row">
+    <div class="{{ editor.colClass }}">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">{{ editor.title }}</h4>
+            </div>
+            <div class="card-body">
+                <div class="{{ editor.editorClass }}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

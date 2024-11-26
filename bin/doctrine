@@ -1,0 +1,47 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Migrations\DependencyFactory;
+use Doctrine\Migrations\Configuration\Migration\PhpFile;
+use Doctrine\Migrations\Tools\Console\Command as MigrationsCommand;
+use Symfony\Component\Console\Application;
+
+// تحميل إعدادات Doctrine EntityManager
+$entityManager = require __DIR__ . '/../config/doctrine.php';
+
+// التحقق من صحة EntityManager
+if (!$entityManager instanceof EntityManagerInterface) {
+    throw new \RuntimeException('EntityManager is not properly configured.');
+}
+
+// تحميل إعدادات Migrations
+$configFile = __DIR__ . '/../config/migrations.php';
+$config = new PhpFile($configFile);
+
+// إنشاء DependencyFactory
+$dependencyFactory = DependencyFactory::fromEntityManager(
+    $config,
+    new \Doctrine\Migrations\Configuration\EntityManager\ExistingEntityManager($entityManager)
+);
+
+// إنشاء تطبيق Symfony Console
+$cli = new Application('Doctrine Migrations');
+
+// إضافة أوامر Migrations
+$cli->addCommands([
+    new MigrationsCommand\DumpSchemaCommand($dependencyFactory),
+    new MigrationsCommand\ExecuteCommand($dependencyFactory),
+    new MigrationsCommand\GenerateCommand($dependencyFactory),
+    new MigrationsCommand\LatestCommand($dependencyFactory),
+    new MigrationsCommand\MigrateCommand($dependencyFactory),
+    new MigrationsCommand\RollupCommand($dependencyFactory),
+    new MigrationsCommand\StatusCommand($dependencyFactory),
+    new MigrationsCommand\SyncMetadataCommand($dependencyFactory),
+    new MigrationsCommand\VersionCommand($dependencyFactory),
+]);
+
+// تشغيل التطبيق
+$cli->run();

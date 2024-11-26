@@ -1,0 +1,7 @@
+<div class="progress">
+    {% for bar in bars %}
+    <div class="progress-bar {{ bar.color }}" style="width: {{ bar.width }}%; height: {{ bar.height }};" role="progressbar">
+        <span class="sr-only">{{ bar.srText }}</span>
+    </div>
+    {% endfor %}
+</div>

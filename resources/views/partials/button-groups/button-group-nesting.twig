@@ -1,0 +1,18 @@
+<div class="btn-group" role="group">
+    {% for button in buttons %}
+    {% if button.dropdown %}
+    <div class="btn-group">
+        <button type="button" class="btn btn-{{ button.type }} dropdown-toggle" data-toggle="dropdown">
+            {{ button.text }}
+        </button>
+        <div class="dropdown-menu">
+            {% for link in button.dropdown %}
+            <a class="dropdown-item" href="{{ link.url }}">{{ link.text }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <button type="button" class="btn btn-{{ button.type }}">{{ button.text }}</button>
+    {% endif %}
+    {% endfor %}
+</div>

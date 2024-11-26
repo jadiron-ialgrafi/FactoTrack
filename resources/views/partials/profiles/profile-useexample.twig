@@ -1,0 +1,29 @@
+{% include 'partials/profiles/profile-main.twig' with {
+    profile: {
+        name: 'Mitchell C. Shay',
+        role: 'UX / UI Designer',
+        email: 'hello@email.com'
+    }
+} %}
+
+{% include 'partials/profiles/profile-statistics.twig' with {
+    stats: {
+        followers: 150,
+        places: 140,
+        reviews: 45
+    }
+} %}
+
+{% include 'partials/profiles/profile-about.twig' with {
+    about: {
+        text: 'A wonderful serenity has taken possession of my soul...'
+    }
+} %}
+
+{% include 'partials/profiles/profile-settings.twig' with {
+    settings: {
+        email: 'hello@email.com',
+        password: '********',
+        address: '1234 Main St'
+    }
+} %}

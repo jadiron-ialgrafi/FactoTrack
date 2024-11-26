@@ -1,0 +1,32 @@
+<div class="form-validation">
+    <form class="form-valide" action="#" method="post">
+        {% for field in fields %}
+        <div class="form-group row">
+            <label class="col-lg-4 col-form-label" for="{{ field.id }}">
+                {{ field.label }} {% if field.required %}<span class="text-danger">*</span>{% endif %}
+            </label>
+            <div class="col-lg-8">
+                {% if field.type == 'text' or field.type == 'password' or field.type == 'email' %}
+                <input type="{{ field.type }}" class="form-control" id="{{ field.id }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}">
+                {% elseif field.type == 'textarea' %}
+                <textarea class="form-control" id="{{ field.id }}" name="{{ field.name }}" rows="{{ field.rows }}" placeholder="{{ field.placeholder }}"></textarea>
+                {% elseif field.type == 'select' %}
+                <select class="form-control {% if field.extra_class is defined %}{{ field.extra_class }}{% endif %}" id="{{ field.id }}" name="{{ field.name }}" {% if field.multiple %}multiple{% endif %}>
+                    {% for option in field.options %}
+                    <option value="{{ option.value }}">{{ option.label }}</option>
+                    {% endfor %}
+                </select>
+                {% elseif field.type == 'checkbox' %}
+                <input type="checkbox" class="css-control-input" id="{{ field.id }}" name="{{ field.name }}" value="{{ field.value }}">
+                <label class="css-control-indicator" for="{{ field.id }}">{{ field.label }}</label>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="form-group row">
+            <div class="col-lg-8 ml-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,5 @@
+<div class="btn-group">
+    {% for button in buttons %}
+    <button type="button" class="btn btn-{{ button.type }}">{{ button.text }}</button>
+    {% endfor %}
+</div>

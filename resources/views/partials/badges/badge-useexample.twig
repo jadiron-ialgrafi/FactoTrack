@@ -1,0 +1,23 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Default Badge -->
+            {% include 'partials/badges/badge-default.twig' with { type: 'primary', text: 'Primary Badge' } %}
+            
+            <!-- Pill Badge -->
+            {% include 'partials/badges/badge-pill.twig' with { type: 'success', text: 'Success Pill' } %}
+            
+            <!-- Link Badge -->
+            {% include 'partials/badges/badge-link.twig' with { url: '#', type: 'info', text: 'Info Link' } %}
+            
+            <!-- Rounded Badge -->
+            {% include 'partials/badges/badge-rounded.twig' with { url: '#', type: 'warning', text: 'Warning Rounded' } %}
+            
+            <!-- Circle Badge -->
+            {% include 'partials/badges/badge-circle.twig' with { url: '#', type: 'danger', text: '5' } %}
+            
+            <!-- Badge with Size -->
+            {% include 'partials/badges/badge-sizes.twig' with { url: '#', type: 'secondary', size: 'lg', text: 'Large Badge' } %}
+        </div>
+    </div>
+</div>

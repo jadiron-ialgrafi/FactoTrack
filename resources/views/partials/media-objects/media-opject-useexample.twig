@@ -1,0 +1,57 @@
+media-object.twig
+{% include 'partials/media-objects/media-object.twig' with {
+    imageSrc: './images/avatar/1.jpg',
+    altText: 'Quixkit',
+    heading: 'Media heading',
+    description: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.'
+} %}
+
+
+nested-media-object.twig
+{% include 'partials/media-objects/nested-media-object.twig' with {
+    imageSrc: './images/avatar/2.jpg',
+    altText: 'Quixkit',
+    heading: 'Media heading',
+    description: 'Cras sit amet nibh libero, in gravida nulla.',
+    nestedImageSrc: './images/avatar/3.jpg',
+    nestedAltText: 'Nested Image',
+    nestedHeading: 'Nested Media heading',
+    nestedDescription: 'Nested description content goes here.'
+} %}
+
+
+align-top-media-object.twig
+{% include 'partials/media-objects/align-top-media-object.twig' with {
+    imageSrc: './images/avatar/4.jpg',
+    altText: 'Quixkit',
+    heading: 'Top-aligned media',
+    description: 'Description for top-aligned media object.'
+} %}
+
+
+align-center-media-object.twig
+{% include 'partials/media-objects/align-center-media-object.twig' with {
+    imageSrc: './images/avatar/5.jpg',
+    altText: 'Quixkit',
+    heading: 'Center-aligned media',
+    description: 'Description for center-aligned media object.'
+} %}
+
+
+align-bottom-media-object.twig
+{% include 'partials/media-objects/align-bottom-media-object.twig' with {
+    imageSrc: './images/avatar/6.jpg',
+    altText: 'Quixkit',
+    heading: 'Bottom-aligned media',
+    description: 'Description for bottom-aligned media object.'
+} %}
+
+
+media-list.twig
+{% include 'partials/media-objects/media-list.twig' with {
+    items: [
+        { imageSrc: './images/avatar/8.jpg', altText: 'Quixkit', heading: 'List-based media object', description: 'Description for list item 1.' },
+        { imageSrc: './images/avatar/1.jpg', altText: 'Quixkit', heading: 'List-based media object', description: 'Description for list item 2.' },
+        { imageSrc: './images/avatar/2.jpg', altText: 'Quixkit', heading: 'List-based media object', description: 'Description for list item 3.' }
+    ]
+} %}

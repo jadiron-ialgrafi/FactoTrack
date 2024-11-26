@@ -1,0 +1,21 @@
+{% extends "./layouts/app.twig" %}
+
+{% block content %}
+<div class="content-body">
+    <div class="container-fluid">
+        
+        <!-- Loop through all the partials and display them -->
+        {% for section, templates in partials %}
+            <div class="row mb-4">
+                <h2 class="section-title text-capitalize">{{ section }}</h2>
+                {% for template in templates %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        {% include template %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

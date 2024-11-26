@@ -1,0 +1,40 @@
+<!-- Basic Knob -->
+{% include 'partials/knobs/knob-basic.twig' with {
+    knob: {
+        title: 'Basic Knob',
+        width: '200',
+        min: '-100',
+        max: '100',
+        displayPrevious: true,
+        bgColor: '#EEEEEE',
+        fgColor: '#FB6E52',
+        thickness: '.2',
+        value: '75'
+    }
+} %}
+
+<!-- Responsive Knob -->
+{% include 'partials/knobs/knob-responsive.twig' with {
+    knob: {
+        title: 'Responsive Knob',
+        width: '75%',
+        value: '35'
+    }
+} %}
+
+<!-- Read-Only Knob -->
+{% include 'partials/knobs/knob-readonly.twig' with {
+    knob: {
+        title: 'Read-Only Knob',
+        fgColor: 'chartreuse',
+        thickness: '.4',
+        value: '22'
+    }
+} %}
+
+<!-- Superpose (Clock) Knob -->
+{% include 'partials/knobs/knob-superpose.twig' with {
+    knob: {
+        title: 'Superpose (Clock)'
+    }
+} %}

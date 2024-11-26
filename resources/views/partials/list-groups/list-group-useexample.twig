@@ -1,0 +1,55 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>{{ title }}</h4>
+                    <span class="ml-1">{{ subtitle }}</span>
+                </div>
+            </div>
+            <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                <ol class="breadcrumb">
+                    {% for crumb in breadcrumbs %}
+                    <li class="breadcrumb-item {% if loop.last %}active{% endif %}">
+                        <a href="{{ crumb.link }}">{{ crumb.label }}</a>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Basic List Group -->
+            <div class="col-lg-6">
+                {% include 'partials/list-group-basic.twig' with { items: ['Item 1', 'Item 2', 'Item 3'] } %}
+            </div>
+
+            <!-- Active List Group -->
+            <div class="col-lg-6">
+                {% include 'partials/list-group-active.twig' with { items: ['Active Item', 'Item 2', 'Item 3'] } %}
+            </div>
+
+            <!-- Disabled List Group -->
+            <div class="col-lg-6">
+                {% include 'partials/list-group-disabled.twig' with { items: ['Disabled Item', 'Item 2', 'Item 3'] } %}
+            </div>
+
+            <!-- Links List Group -->
+            <div class="col-lg-6">
+                {% include 'partials/list-group-links.twig' with { items: [
+                    { text: 'Link 1', link: '#', active: true },
+                    { text: 'Link 2', link: '#', disabled: false },
+                    { text: 'Link 3', link: '#', disabled: true }
+                ] } %}
+            </div>
+
+            <!-- List with Badges -->
+            <div class="col-lg-6">
+                {% include 'partials/list-group-badges.twig' with { items: [
+                    { text: 'Badge 1', badge: 14 },
+                    { text: 'Badge 2', badge: 2 }
+                ] } %}
+            </div>
+        </div>
+    </div>
+</div>

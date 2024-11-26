@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">{{ title }}</h5>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{ body }}</p>
+    </div>
+    <div class="card-footer">
+        <p class="card-text d-inline">{{ footer }}</p>
+        {% if link %}
+        <a href="{{ link.url }}" class="card-link float-right">{{ link.text }}</a>
+        {% endif %}
+    </div>
+</div>

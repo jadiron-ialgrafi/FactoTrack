@@ -1,0 +1,10 @@
+<div class="quixnav">
+    <div class="quixnav-scroll">
+        <ul class="metismenu" id="menu">
+            {% include 'layouts/sidebars/menu-section.twig' with {'label': 'Main Menu', 'items': mainMenuItems} %}
+            {% include 'layouts/sidebars/menu-section.twig' with {'label': 'Apps', 'items': appsMenuItems} %}
+            {% include 'layouts/sidebars/menu-section.twig' with {'label': 'Components', 'items': componentsMenuItems} %}
+            {% include 'layouts/sidebars/menu-section.twig' with {'label': 'Extra', 'items': extraMenuItems} %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+1-Basic Card:
+{% include 'partials/cards/basic-card.twig' with {
+    title: 'Card Title',
+    body: 'This is a basic card example.',
+    footer: 'Card footer',
+    link: { url: '#', text: 'Learn More' }
+} %}
+
+
+2-Image Card:
+{% include 'partials/cards/image-card.twig' with {
+    image: './images/card/1.png',
+    title: 'Card Title',
+    body: 'This card includes an image.',
+    footer: 'Last updated 3 mins ago'
+} %}
+
+
+3-Colored Card
+{% include 'partials/cards/colored-card.twig' with {
+    color: 'primary',
+    title: 'Primary Card',
+    body: 'This card has a primary background.',
+    footer: 'Last updated 3 mins ago',
+    button: { url: '#', text: 'Go somewhere' }
+} %}
+
+
+4-Vertical Card:
+{% include 'partials/cards/vertical-card.twig' with {
+    title: 'Card with Tabs',
+    body: 'This card has tab navigation.',
+    tabs: [
+        { url: '#', text: 'Active Tab' },
+        { url: '#', text: 'Second Tab' },
+        { url: '#', text: 'Disabled Tab' }
+    ],
+    button: { url: '#', text: 'Go somewhere' }
+} %}

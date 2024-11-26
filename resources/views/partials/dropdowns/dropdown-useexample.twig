@@ -1,0 +1,54 @@
+Basic Dropdown
+{% include 'partials/dropdowns/dropdown-basic.twig' with {
+    id: 'dropdownExample',
+    label: 'Dropdown',
+    items: [
+        { href: '#', label: 'Link 1' },
+        { href: '#', label: 'Link 2', divider: true },
+        { href: '#', label: 'Link 3' }
+    ]
+} %}
+
+
+Dropdown with Header
+{% include 'partials/dropdowns/dropdown-with-header.twig' with {
+    id: 'dropdownWithHeader',
+    label: 'Dropdown with Header',
+    groups: [
+        {
+            header: 'Group 1',
+            items: [
+                { href: '#', label: 'Item 1' },
+                { href: '#', label: 'Item 2' }
+            ]
+        },
+        {
+            header: 'Group 2',
+            items: [
+                { href: '#', label: 'Item 3' },
+                { href: '#', label: 'Item 4' }
+            ]
+        }
+    ]
+} %}
+
+
+Dropdown with Right Alignment
+{% include 'partials/dropdowns/dropdown-alignment.twig' with {
+    id: 'dropdownRightAligned',
+    label: 'Right-Aligned Dropdown',
+    items: [
+        { href: '#', label: 'Link 1' },
+        { href: '#', label: 'Link 2' }
+    ]
+} %}
+
+
+Split Button Dropdown
+{% include 'partials/dropdowns/dropdown-split-button.twig' with {
+    label: 'Split Button',
+    items: [
+        { href: '#', label: 'Action 1' },
+        { href: '#', label: 'Action 2' }
+    ]
+} %}

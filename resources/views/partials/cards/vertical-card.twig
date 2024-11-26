@@ -1,0 +1,18 @@
+<div class="card text-center">
+    <div class="card-header">
+        <h5 class="card-title">{{ title }}</h5>
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs card-body-tabs">
+            {% for tab in tabs %}
+            <li class="nav-item">
+                <a class="nav-link {% if loop.first %}active{% endif %}" href="{{ tab.url }}">{{ tab.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <p class="card-text">{{ body }}</p>
+        {% if button %}
+        <a href="{{ button.url }}" class="btn btn-primary btn-card">{{ button.text }}</a>
+        {% endif %}
+    </div>
+</div>
